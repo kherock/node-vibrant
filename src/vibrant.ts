@@ -70,7 +70,6 @@ class Vibrant {
         return image.load(this._src)
             .then((image) => this._process(image, this.opts))
             .tap((palette) => this._palette = palette)
-            .finally(() => image.remove())
             .asCallback(cb)
     }
 }
